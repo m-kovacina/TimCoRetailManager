@@ -29,7 +29,8 @@ namespace TRMDesktopUI
 
             _container
                 .Singleton<IEventAggregator, EventAggregator>()
-                .Singleton<IWindowManager, WindowManager>();
+                .Singleton<IWindowManager, WindowManager>()
+                .Singleton<IAPIHelper, APIHelper>();
 
             GetType().Assembly.GetTypes()
                 .Where(type => type.IsClass)
